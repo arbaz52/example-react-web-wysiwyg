@@ -86,6 +86,19 @@ export const addEntityAtom = atom(null, (get, set, type: EEntity) => {
   return entity;
 });
 
+export const setEntityAtom = atom(
+  null,
+  (get, set, entityId: string, options: Partial<IEntity>) => {
+    const store = get(storeAtom);
+    const update = produce(store, (draft) => {
+      const entity = draft.children[entityId];
+      if (!entity) return;
+      Object.assign(entity, options);
+    });
+    set(storeAtom, update);
+  },
+);
+
 export const addTextEntityAtom = atom(
   null,
   (get, set, options: Partial<IText>) => {

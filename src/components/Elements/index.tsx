@@ -44,7 +44,7 @@ export const Elements: FC = () => {
       <div className="flex flex-col gap-3">
         <Section
           title="Typography"
-          options={["Paragraph", "Heading"]}
+          options={["Paragraph", "Heading", "Span"]}
           onSelect={(option) => {
             if (option === "Paragraph")
               addTextEntity({
@@ -52,6 +52,8 @@ export const Elements: FC = () => {
               });
             else if (option === "Heading")
               addTextEntity({ text: "Heading", textType: "heading" });
+            else if (option === "Span")
+              addTextEntity({ text: "span text", textType: "span" });
           }}
         />
 

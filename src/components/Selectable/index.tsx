@@ -1,13 +1,13 @@
 import { useSetAtom } from "jotai";
-import { setHoveringOverAtom, setSelectedAtom } from "@/store";
 import { FC, PropsWithChildren } from "react";
+import { setHoveringOverAtom, setSelectedAtom } from "@/store";
 
 export const Selectable: FC<PropsWithChildren & { entityId: string }> = ({
   children,
   entityId,
 }) => {
-  const setHoveringOver = useSetAtom(setHoveringOverAtom);
   const setSelected = useSetAtom(setSelectedAtom);
+  const setHoveringOver = useSetAtom(setHoveringOverAtom);
   return (
     <div
       className="contents"

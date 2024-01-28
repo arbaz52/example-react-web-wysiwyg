@@ -74,7 +74,7 @@ export const Overlay: FC = () => {
             height: selectedRect.height,
           }}
         >
-          <div className="bg-blue-500 text-xs px-1 absolute top-0 left-0 text-white">
+          <div className="bg-blue-500 text-xs px-1 absolute top-0 translate-y-[-100%] left-0 text-white">
             {selectedEntityId}
           </div>
         </div>
@@ -91,7 +91,7 @@ export const Overlay: FC = () => {
             height: hoveringRect.height,
           }}
         >
-          <div className="bg-blue-500 text-xs px-1 absolute top-0 left-0 text-white">
+          <div className="bg-blue-500 text-xs px-1 absolute top-0 translate-y-[-100%] left-0 text-white">
             {hoveringOverEntityId}
           </div>
         </div>
