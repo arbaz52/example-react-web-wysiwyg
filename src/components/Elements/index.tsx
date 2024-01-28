@@ -50,7 +50,8 @@ export const Elements: FC = () => {
               addTextEntity({
                 text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, cupiditate.",
               });
-            else if (option === "Heading") addTextEntity({ text: "Heading" });
+            else if (option === "Heading")
+              addTextEntity({ text: "Heading", textType: "heading" });
           }}
         />
 

@@ -92,7 +92,7 @@ export const Overlay: FC = () => {
           }}
         >
           <div className="bg-blue-500 text-xs px-1 absolute top-0 left-0 text-white">
-            {selectedEntityId}
+            {hoveringOverEntityId}
           </div>
         </div>
       ) : (

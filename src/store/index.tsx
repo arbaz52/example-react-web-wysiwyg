@@ -15,6 +15,7 @@ type IBlock = {
 
 type IText = {
   text: string;
+  textType: "heading" | "paragraph" | "span";
   _type: EEntity.TEXT;
 };
 
@@ -54,7 +55,7 @@ export const addEntityAtom = atom(null, (get, set, type: EEntity) => {
     const id = generateId();
     switch (type) {
       case EEntity.TEXT:
-        return { _type: EEntity.TEXT, text: "", id };
+        return { _type: EEntity.TEXT, text: "", id, textType: "paragraph" };
 
       case EEntity.BLOCK:
         return { _type: EEntity.BLOCK, childrenIds: [], id };
