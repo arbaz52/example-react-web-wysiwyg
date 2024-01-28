@@ -4,7 +4,7 @@ import { FC, useRef, useState } from "react";
 import { EEntity, IEntity, setEntityAtom } from "@/store";
 
 const text = tv({
-  base: "inline-block whitespace-pre-wrap",
+  base: "inline-block whitespace-pre-wrap select-none",
   variants: {
     type: {
       span: "w-fit",
@@ -51,7 +51,7 @@ export const Text: FC<IEntity> = (entity) => {
         evt.key === "Escape" && stopEditing();
       }}
       onBlur={() => stopEditing()}
-      contentEditable={editable}
+      contentEditable={editable ? "plaintext-only" : false}
       dangerouslySetInnerHTML={{
         __html: children,
       }}
