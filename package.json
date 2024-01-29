@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://arbaz52.github.io/arbaz52/example-react-web-wysiwyg",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
